@@ -1,0 +1,208 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #ff6b6b;
+  --primary-foreground: #ffffff;
+  --secondary: #4ecdc4;
+  --secondary-foreground: #ffffff;
+  --accent: #ffe66d;
+  --accent-foreground: #333333;
+  --tertiary: #6a67ce;
+  --tertiary-foreground: #ffffff;
+  --quaternary: #51cf66;
+  --quaternary-foreground: #ffffff;
+  --background: #f7f9fc;
+  --foreground: #333333;
+  --muted: #e9ecef;
+  --muted-foreground: #666666;
+  --card: #ffffff;
+  --card-foreground: #333333;
+  --border: #e0e0e0;
+  --input: #f0f0f0;
+  --ring: #ff6b6b;
+  --radius: 1.2rem;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+}
+
+.neumorphic {
+  border-radius: var(--radius);
+  background: var(--background);
+  box-shadow: 10px 10px 20px #d1d3d6, -10px -10px 20px #ffffff;
+  transition: all 0.3s ease;
+}
+
+.neumorphic:hover {
+  box-shadow: 12px 12px 24px #c4c6c9, -12px -12px 24px #ffffff;
+}
+
+.neumorphic-inset {
+  border-radius: var(--radius);
+  background: var(--background);
+  box-shadow: inset 8px 8px 16px #d1d3d6, inset -8px -8px 16px #ffffff;
+}
+
+.neumorphic-btn {
+  border-radius: var(--radius);
+  background: var(--background);
+  box-shadow: 6px 6px 12px #d1d3d6, -6px -6px 12px #ffffff;
+  transition: all 0.2s ease;
+}
+
+.neumorphic-btn:hover {
+  box-shadow: 4px 4px 8px #d1d3d6, -4px -4px 8px #ffffff;
+  transform: translateY(-2px);
+}
+
+.neumorphic-btn:active {
+  box-shadow: inset 6px 6px 12px #d1d3d6, inset -6px -6px 12px #ffffff;
+  transform: translateY(0);
+}
+
+.neumorphic-primary {
+  border-radius: var(--radius);
+  background: var(--primary);
+  box-shadow: 6px 6px 12px #d96060, -6px -6px 12px #ff7676;
+  transition: all 0.2s ease;
+}
+
+.neumorphic-primary:hover {
+  box-shadow: 4px 4px 8px #d96060, -4px -4px 8px #ff7676;
+  transform: translateY(-2px);
+}
+
+.neumorphic-secondary {
+  border-radius: var(--radius);
+  background: var(--secondary);
+  box-shadow: 6px 6px 12px #42aea7, -6px -6px 12px #5aebe1;
+  transition: all 0.2s ease;
+}
+
+.neumorphic-secondary:hover {
+  box-shadow: 4px 4px 8px #42aea7, -4px -4px 8px #5aebe1;
+  transform: translateY(-2px);
+}
+
+.neumorphic-accent {
+  border-radius: var(--radius);
+  background: var(--accent);
+  box-shadow: 6px 6px 12px #d9c45d, -6px -6px 12px #ffff7d;
+  transition: all 0.2s ease;
+}
+
+.neumorphic-accent:hover {
+  box-shadow: 4px 4px 8px #d9c45d, -4px -4px 8px #ffff7d;
+  transform: translateY(-2px);
+}
+
+.neumorphic-tertiary {
+  border-radius: var(--radius);
+  background: var(--tertiary);
+  box-shadow: 6px 6px 12px #5a58af, -6px -6px 12px #7a76ed;
+  transition: all 0.2s ease;
+}
+
+.neumorphic-tertiary:hover {
+  box-shadow: 4px 4px 8px #5a58af, -4px -4px 8px #7a76ed;
+  transform: translateY(-2px);
+}
+
+.neumorphic-quaternary {
+  border-radius: var(--radius);
+  background: var(--quaternary);
+  box-shadow: 6px 6px 12px #45b057, -6px -6px 12px #5dee75;
+  transition: all 0.2s ease;
+}
+
+.neumorphic-quaternary:hover {
+  box-shadow: 4px 4px 8px #45b057, -4px -4px 8px #5dee75;
+  transform: translateY(-2px);
+}
+
+.card-hover {
+  transition: all 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-5px);
+}
+
+.pattern-bg {
+  background-color: var(--background);
+  background-image: radial-gradient(var(--muted) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+.wave-bg {
+  position: relative;
+  overflow: hidden;
+}
+
+.wave-bg::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 15%;
+  background: var(--primary);
+  border-radius: 100% 100% 0 0;
+  opacity: 0.1;
+}
+
+.wave-bg::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 10%;
+  background: var(--secondary);
+  border-radius: 100% 100% 0 0;
+  opacity: 0.1;
+}
+
+.blob-bg {
+  position: relative;
+  overflow: hidden;
+}
+
+.blob-bg::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  width: 80%;
+  height: 80%;
+  background: var(--accent);
+  border-radius: 50%;
+  opacity: 0.1;
+  z-index: -1;
+}
+
+.blob-bg::after {
+  content: "";
+  position: absolute;
+  bottom: -50%;
+  left: -50%;
+  width: 80%;
+  height: 80%;
+  background: var(--tertiary);
+  border-radius: 50%;
+  opacity: 0.1;
+  z-index: -1;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
